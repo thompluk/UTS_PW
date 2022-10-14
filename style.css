@@ -1,14 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap");
 .bg {
     background-color: #f8f9fa;
-    background-image: url("../asset/landingPageBg.jpg");
+    background-image: url("../UTS_PW-1/asset/landingPageBg.jpg");
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 * {
     font-family: "Poppins";
+}
+
+.logo{
+    background-image: url("../UTS_PW-1/asset/logo.png");
 }
 
 h2.landingTitle{
