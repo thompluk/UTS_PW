@@ -1,5 +1,5 @@
 <?php
- session_start();
+session_start();
 if (!$_SESSION['isLogin']) {
 header("location: ../page/loginPage.php");
 }else {
@@ -98,7 +98,7 @@ echo '
                                     <a href="./profileUsersPage.php" style="font-weight:500">Profile</a>
                                 </div>
                                 <div class="content-menu" >
-                                    <i class="fa fa-user"></i>
+                                    <i class="fa fa-arrow-right-from-bracket"></i>
                                     <a href="../process/logoutProcess.php" style="font-weight:500">Logout</a>
                                 </div>
                             </div>
