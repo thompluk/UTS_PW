@@ -72,6 +72,12 @@ echo '
                     padding: 1px 16px;
                     height: 1000px;
                 }
+
+                textarea {
+                    border-width:0px;
+                    border:none;
+                    outline:none;
+                }
         </style>
     </head>
 

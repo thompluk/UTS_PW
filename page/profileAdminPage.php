@@ -2,7 +2,8 @@
 include '../component/sidebar.php';
 include( '../db.php');
 
-$query = mysqli_query($con, "SELECT * FROM users WHERE id = ". $_SESSION['user']['id']);
+$query = mysqli_query($con, "SELECT * FROM admins WHERE id = ". $_SESSION['user']['id'])or
+die(mysqli_error($con));
 $user = mysqli_fetch_assoc($query);
 ?>
 
@@ -17,8 +18,8 @@ $user = mysqli_fetch_assoc($query);
                             <hr>
                             <div class="d-flex flex-column align-items-center text-center">
                                 <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Admin" class="rounded-circle p-1 bg-primary" width="110">
-                                <div class="mt-3">
-                                    <h4>(Nama Login)</h4>
+                                
+
                                     <p class="text-secondary mb-1">Admin</p>
                                     <p class="text-muted font-size-sm">ATMA JAYA YOGYAKARTA</p>
                                 </div>
@@ -37,7 +38,7 @@ $user = mysqli_fetch_assoc($query);
                                     <h6 class="mb-0">Phone Number</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                <input class="form-control bg-transparent" id="phonenum" name="phonenum" aria-describedby="emailHelp" value="<?php echo $user['phonenum']?>" disabled>
+                                <input class="form-control bg-transparent" id="phonenum" name="phonenum" aria-describedby="emailHelp" value="<?php echo $user['phone']?>" disabled>
                                 </div>
                             </div>
                             <div class="row mb-3">

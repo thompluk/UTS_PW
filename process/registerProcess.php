@@ -19,7 +19,7 @@
             alert("Email must be identict");
             </script>';
         }
-        if((mysqli_num_rows($query2) == 0)|| (mysqli_num_rows($query3) == 0)){
+        if((mysqli_num_rows($query2) == 0)){
             $query = mysqli_query($con,
             "INSERT INTO admins(name, password, email) 
                 VALUES
