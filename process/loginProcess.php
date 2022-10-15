@@ -32,7 +32,7 @@
             }else {
                 echo
                     '<script>
-                    alert("Email or Password Invalid");
+                    alert("Password Invalid");
                     window.location = "../page/loginPage.php"
                     </script>';
             }

@@ -16,7 +16,7 @@
         if(mysqli_num_rows($checkEmail) !=0){
             echo
                 '<script>
-                alert("Email already register");
+                alert("Email already registered");
                 window.location = "../page/registerPage.php"
                 </script>';
         }else{
