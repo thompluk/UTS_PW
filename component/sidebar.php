@@ -73,11 +73,6 @@ echo '
                     height: 1000px;
                 }
 
-                textarea {
-                    border-width:0px;
-                    border:none;
-                    outline:none;
-                }
         </style>
     </head>
 
@@ -101,6 +96,10 @@ echo '
                                 <div class="content-menu" >
                                     <i class="fa fa-user"></i>
                                     <a href="./profileAdminPage.php" style="font-weight:500">Profile</a>
+                                </div>
+                                <div class="content-menu" >
+                                    <i class="fa fa-user"></i>
+                                    <a href="../process/logoutProcess.php" style="font-weight:500">Logout</a>
                                 </div>
                             </div>
                         <hr>
