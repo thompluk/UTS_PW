@@ -31,7 +31,7 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="formlabel">Password</label>
-                                    <input type="password" class="form-control" id="password" name="password">
+                                    <input type="password" class="form-control" id="passwords" name="passwords">
                                 </div>
                                 <div class="d-grid gap-2">
                                     <button type="submit" class="btn loginBtn" name="login">Login</button>

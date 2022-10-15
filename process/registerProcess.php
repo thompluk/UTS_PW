@@ -7,10 +7,10 @@
         // tampung nilai yang ada di from ke variabel
         // sesuaikan variabel name yang ada di registerPage.php disetiap input
         $email = $_POST['email'];
-        $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+        $passwords = password_hash($_POST['passwords'], PASSWORD_DEFAULT);
         $name = $_POST['name'];
         
-        $query2 = mysqli_query($con, "SELECT * FROM admins WHERE email = '$email'") or
+        $query2 = mysqli_query($con, "SELECT * FROM users WHERE email = '$email'") or
              die(mysqli_error($con));
 
         if(mysqli_num_rows($query2) !=0){
@@ -21,9 +21,9 @@
         }
         if((mysqli_num_rows($query2) == 0)){
             $query = mysqli_query($con,
-            "INSERT INTO admins(name, password, email) 
+            "INSERT INTO users(name,email, passwords) 
                 VALUES
-            ('$name', '$password', '$email')")
+            ('$name', '$email', '$passwords')")
                 or die(mysqli_error($con));
             echo
                 '<script>

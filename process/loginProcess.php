@@ -6,7 +6,7 @@
         //tampung nilai yang ada di from ke variable
         // sesuaikan variabel name yang ada di registerPage.php disetiap input
         $email = $_POST['email'];
-        $password = $_POST['password'];
+        $passwords = $_POST['passwords'];
         // Melakukan insert ke databse dengan query dibawah ini
         $query = mysqli_query($con, "SELECT * FROM users WHERE email = '$email'") or
         die(mysqli_error($con));
@@ -18,7 +18,7 @@
             </script>';
         }else{
             $user = mysqli_fetch_assoc($query);
-            if(password_verify($password, $user['password'])){
+            if(password_verify($passwords, $user['passwords'])){
                 // session adalah variabel global sementara yang disimpen di server
                 // buat mulai sessionnya pake session_start()
                 session_start();
