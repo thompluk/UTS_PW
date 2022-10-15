@@ -17,8 +17,7 @@ $user = mysqli_fetch_assoc($query);
                             <div class="d-flex flex-column align-items-center text-center">
                                 <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Admin" class="rounded-circle p-1 bg-primary" width="110">
                                 <div class="mt-3">
-                                    <h4>(Nama Login)</h4>
-                                    <p class="text-secondary mb-1">Mahasiswa</p>
+                                    <p class="fw-bold mb-1">MAHASISWA</p>
                                     <p class="text-muted font-size-sm">ATMA JAYA YOGYAKARTA</p>
                                 </div>
                             </div>
@@ -29,14 +28,6 @@ $user = mysqli_fetch_assoc($query);
                                 </div>
                                 <div class="col-sm-9 text-secondary">
                                 <input class="form-control bg-transparent" id="name" name="name" aria-describedby="emailHelp" value="<?php echo $user['name']?>" disabled>
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Phone Number</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                                <input class="form-control bg-transparent" id="phonenum" name="phonenum" aria-describedby="emailHelp" value="<?php echo $user['phonenum']?>" disabled>
                                 </div>
                             </div>
                             <div class="row mb-3">

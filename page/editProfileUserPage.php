@@ -13,7 +13,7 @@ $user = mysqli_fetch_assoc($query);
                 <div class="col-lg-8">
                     <div class="card">
                         <div class="card-body">
-                        <form action="../process/editProfileUserPage.php" method="post">
+                        <form action="../process/editUserProcess.php" method="post">
                           
                         <h4>Edit Profile</h4>
                             <hr>
@@ -33,14 +33,6 @@ $user = mysqli_fetch_assoc($query);
                                 </div>
                                 <div class="col-sm-9 text-secondary">
                                 <input class="form-control" id="name" name="name" aria-describedby="emailHelp" value="<?php echo $user['name']?>">
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <div class="col-sm-3">
-                                    <h6 class="mb-0">Phone Number</h6>
-                                </div>
-                                <div class="col-sm-9 text-secondary">
-                                <input class="form-control" id="phonenum" name="phonenum" aria-describedby="emailHelp" value="<?php echo $user['phonenum']?>">
                                 </div>
                             </div>
                             <div class="row mb-3">
