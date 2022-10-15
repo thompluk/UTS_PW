@@ -94,7 +94,7 @@ echo '
                                 </div>
                                 <div class="content-menu" >
                                     <i class="fa fa-user"></i>
-                                    <a href="./profil.php" style="font-weight:500">Profile</a>
+                                    <a href="./profileAdminPage.php" style="font-weight:500">Profile</a>
                                 </div>
                             </div>
                         <hr>
