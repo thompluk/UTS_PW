@@ -1,8 +1,8 @@
 <?php
-include '../component/sidebar.php';
-include( '../db.php');
-$query = mysqli_query($con, "SELECT * FROM users WHERE id = ". $_SESSION['user']['id']);
-$user = mysqli_fetch_assoc($query);
+    include '../component/sidebar.php';
+    include( '../db.php');
+    $query = mysqli_query($con, "SELECT * FROM users WHERE id = ". $_SESSION['user']['id']);
+    $user = mysqli_fetch_assoc($query);
 ?>
 
 <hr>
