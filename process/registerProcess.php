@@ -15,27 +15,26 @@
 
         if(mysqli_num_rows($checkEmail) !=0){
             echo
+            '<script>
+            alert("Email already register");
+            window.location = "../page/registerPage.php"
+            </script>';
+    }else{
+        $query = mysqli_query($con, "INSERT INTO users(name, passwords, email) VALUES
+        ('$name', '$passwords', '$email')") or die(mysqli_error($con));
+
+        if($query){
+            echo
                 '<script>
-                alert("Email already register");
-                window.location = "../page/registerPage.php"
+                alert("Register Success");
+                window.location = "../index.php"
                 </script>';
         }else{
-            $query = mysqli_query($con, "INSERT INTO users(name, passwords, email) VALUES
-            ('$name', '$passwords', '$email')") or die(mysqli_error($con));
-
-            if($query){
-                echo
-                    '<script>
-                    alert("Register Success");
-                    window.location = "../index.php"
-                    </script>';
-            }else{
-                echo
-                    '<script>
-                    alert("Register Failed");
-                    </script>';
-            }
-        }
+            echo
+                '<script>
+                alert("Register Failed");
+                </script>';
+        }        }
     }else{
         echo
             '<script>
