@@ -16,7 +16,7 @@
     <nav class="navbar navbar-light fixed-top">
         <div class="container">
             <!-- Nama : nama panggilan kalian -->
-            <a class="navbar-brand fw-bold" href="/UTS_PW-1"><img src="./asset/logo.png" alt="logo" style="width:35px"> E-Library</a>
+            <a class="navbar-brand fw-bold" href="/UTS_PW"><img src="./asset/logo.png" alt="logo" style="width:35px"> E-Library</a>
     </nav>
         <div class="bg">
             <div class="container min-vh-100 d-flex align-items-center justify-content-center">
@@ -31,7 +31,7 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="formlabel">Password</label>
-                                    <input type="password" class="form-control" id="password" name="password">
+                                    <input type="password" class="form-control" id="passwords" name="passwords">
                                 </div>
                                 <div class="d-grid gap-2">
                                     <button type="submit" class="btn loginBtn" name="login">Login</button>
