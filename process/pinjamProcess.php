@@ -19,7 +19,7 @@ if($query){
 
     echo
     '<script>
-        alert("Menambah 1 Peminjaman"); window.location = "../page/listBukuPage.php"
+        alert("Menambah 1 Peminjaman"); window.location = "../page/peminjamanPage.php"
     </script>';
     }else{
     echo
