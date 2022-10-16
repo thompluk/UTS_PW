@@ -16,7 +16,7 @@
             echo
                 '<script>
                 alert("Edit Success"); 
-                window.location = "../page/profileUserPage.php"
+                window.location = "../page/profileUsersPage.php"
                 </script>';
         }else{
             echo
@@ -28,7 +28,7 @@
         }else{
         echo
             '<script>
-            window.location = "../page/editProfileUserPage.php"
+            window.location = "../page/editProfileUsersPage.php"
             </script>';
     }
 ?>
