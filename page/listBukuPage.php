@@ -125,12 +125,12 @@
                             <td>'.$data['stok'].'</td>
                             <td><img src="'.$data['gambar'].'" alt="pic" style="width:50px; height:100px;"></td>
                             <td>
-                                <form action="../page/peminjamanPage.php" method="post">
+                                <form action="../process/pinjamProcess.php" method="post">
                                     <button type="submit" class="btn btn-primary">Pinjam</button>
                                 </form>
                             </td>
                         </td>
-                        </tr>';
+                        </tr>'; 
                         $no++;
                         }
                     }
