@@ -125,12 +125,27 @@
                             <td>'.$data['stok'].'</td>
                             <td><img src="'.$data['gambar'].'" alt="pic" style="width:50px; height:100px;"></td>
                             <td>
-                                <form action="../process/pinjamProcess.php" method="post">
-                                    <button type="submit" class="btn btn-primary">Pinjam</button>
-                                </form>
+                            ';
+                            if($data['stok'] == 0){
+                                echo'                                
+                                        <form action="../page/pinjamPage.php" method="post"> 
+                                            <input type="hidden" id="id_buku" name="id_buku" value="'.$data['id'].'">
+                                            <button type="submit" class="btn btn-primary disabled">PINJAM</button>
+                                        </form>
+                                    </td>
+                                </td>
+                                </tr>';
+                            }else{
+                                echo'
+                                        <form action="../page/pinjamPage.php" method="post"> 
+                                            <input type="hidden" id="id_buku" name="id_buku" value="'.$data['id'].'">
+                                        <button type="submit" class="btn btn-primary">PINJAM</button>
+                                    </form>
+                                </td>
                             </td>
-                        </td>
-                        </tr>'; 
+                            </tr>';
+                            }
+ 
                         $no++;
                         }
                     }
