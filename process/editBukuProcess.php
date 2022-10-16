@@ -2,7 +2,7 @@
     if(isset($_POST['save'])){
         include('../db.php');
         session_start();
-        $id = $_SESSION['buku']['id'];
+        $id = $_POST['id_buku'];
         $judul = $_POST['judul'];
         $penulis = $_POST['penulis'];
         $tahun_terbit = $_POST['tahun_terbit'];

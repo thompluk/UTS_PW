@@ -1,10 +1,10 @@
 <?php
-    if(isset($_GET['id'])){
+    if(isset($_POST['id_buku'])){
         include ('../db.php');
         session_start();
-        $id = $_GET['id'];
+        $id_buku = $_POST['id_buku'];
         
-        $queryDelete = mysqli_query($con, "DELETE FROM buku WHERE id='$id'") or
+        $queryDelete = mysqli_query($con, "DELETE FROM buku WHERE id='$id_buku'") or
         die(mysqli_error($con));
         
         if($queryDelete){

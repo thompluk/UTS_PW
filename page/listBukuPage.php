@@ -27,7 +27,7 @@
                 <h4>LIST BUKU</h4>
             </div>
             <hr>
-            
+            <form action="../page/createBukuPage.php" method="post">
                 <table class="table ">
                 <thead>
                     <tr>
@@ -58,14 +58,16 @@
                             <td>'.$data['stok'].'</td>
                             <td><img src="'.$data['gambar'].'" alt="pic" style="width:50px; height:100px;"></td>
                             <td>
-                                <form action="../page/peminjamanPage.php" method="post">
-                                    <button type="submit" class="btn btn-primary">Edit</button>
+                                <form action="../page/editBukuPage.php" method="post">
+                                    <input type="hidden" id="id_buku" name="id_buku" value="'.$data['id'].'"> 
+                                    <button type="submit" class="btn btn-primary">Ubah</button>
                                 </form>
                             </td>
                             <td>
-                            <form action="../page/peminjamanPage.php" method="post">
+                            <form action="../process/deleteBukuProcess.php" method="post">
+                                <input type="hidden" id="id_buku" name="id_buku" value="'.$data['id'].'"> 
                                 <button type="submit" class="btn btn-danger">Hapus</button>
-                            </form>
+                            </form>           
                             </td>
                         </tr>';
                         $no++;
@@ -74,6 +76,8 @@
                     echo' 
                 </tbody>
             </table>
+            <button type="submit" class="btn btn-success" name="create">Tambah Buku</button>
+            </form>
         </div>
         </aside>
         <script
