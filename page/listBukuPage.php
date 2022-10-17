@@ -6,7 +6,7 @@
     $user = mysqli_fetch_assoc($query_user);
 
     $query_buku = mysqli_query($con, "SELECT * FROM buku") or die(mysqli_error($con));
-    $image = base64_encode($user['foto']);
+    $image = base64_encode($user['gambar']);
 
 
     // $judul = $data['judul'];
