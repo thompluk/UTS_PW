@@ -30,7 +30,7 @@
                 window.location = "../page/registerPage.php"
                 </script>';
         }else{
-            $query = mysqli_query($con, "INSERT INTO users(name, passwords, email,foto) VALUES
+            $query = mysqli_query($con, "INSERT INTO users(name, passwords, email, foto) VALUES
             ('$name', '$passwords', '$email','$foto_user')") or die(mysqli_error($con));
 
             if($query){
