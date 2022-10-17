@@ -6,6 +6,7 @@
     $user = mysqli_fetch_assoc($query_user);
 
     $query_buku = mysqli_query($con, "SELECT * FROM buku") or die(mysqli_error($con));
+    $image = base64_encode($user['foto']);
 
 
     // $judul = $data['judul'];
@@ -48,8 +49,7 @@
                         <tr> <td colspan="7"> Tidak ada data </td> </tr>';
                     }else{
                         $no = 1;
-                        while($data = mysqli_fetch_assoc($query_buku)){                      
-                        
+                        while($data = mysqli_fetch_assoc($query_buku)){
                         echo'        
                         <tr>
                             <th scope="row">'.$no.'</th>
@@ -57,7 +57,7 @@
                             <td>'.$data['penulis'].'</td>
                             <td>'.$data['tahun_terbit'].'</td>
                             <td>'.$data['stok'].'</td>
-                            <td><img src="../process/uploads/'.$data['gambar'].'" alt="pic" style="width: 100px; height: 100px;"></td>                            
+                            <td><img src="data:image/jpeg;base64,'.$image.'" alt=""" style="width:100px; height:150px;"></td>
                             <td>
                                 <form action="../page/editBukuPage.php" method="post">
                                     <input type="hidden" id="id_buku" name="id_buku" value="'.$data['id'].'"> 
