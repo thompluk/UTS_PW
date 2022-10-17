@@ -113,21 +113,26 @@ solid #114ec88d; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0
                     if($data['status'] == 1){
                         echo'
                             <td>Belum dikembalikan</td>
+                            <td>
+                            <form action="../page/pengembalianPage.php" method="post"> 
+                                <input type="hidden" id="id" name="id" value="'.$data['id'].'">
+                                <button type="submit" class="btn btn-primary">KEMBALIKAN</button>
+                            </form>
+                        </td>
+                        </tr
                         ';    
                     }else{
                         echo'
                             <td>Sudah dikembalikan</td>
-                        ';                         
-                    }
-                    echo'
-                        <td>
+                            <td>
                             <form action="../page/pengembalianPage.php" method="post"> 
-                                <input type="hidden" id="id_buku" name="id_buku" value="'.$data_buku['id'].'">
-                                <button type="submit" class="btn btn-primary">KEMBALIKAN</button>
+                                <input type="hidden" id="id" name="id" value="'.$data['id'].'">
+                                <button type="submit" class="btn btn-primary" disabled>KEMBALIKAN</button>
                             </form>
                         </td>
-                        </tr>';
-                    
+                        </tr
+                        ';                         
+                    }                
                     $no++;
                 }
             }

@@ -13,17 +13,19 @@
     <?php
 
         include '../db.php';
-        if(isset($_POST['id_buku'])){
+        if(isset($_POST['id'])){
             include ('../db.php');
-            $id_buku = $_POST['id_buku'];
-            $id_user = $_SESSION['user']['id'];
+            $id_peminjaman = $_POST['id'];
+            $query_peminjaman = mysqli_query($con, "SELECT * FROM peminjaman WHERE id='$id_peminjaman'") or die(mysqli_error($con));
+            $data_peminjaman = mysqli_fetch_assoc($query_peminjaman);
+
+            $id_buku = $data_peminjaman['id_buku'];
+            $id_user = $data_peminjaman['id_user'];
+
             $query_buku = mysqli_query($con, "SELECT * FROM buku WHERE id='$id_buku'") or die(mysqli_error($con));
             $query_user = mysqli_query($con, "SELECT * FROM users WHERE id='$id_user'") or die(mysqli_error($con));
             $data_user = mysqli_fetch_assoc($query_user);
             $data_buku = mysqli_fetch_assoc($query_buku);
-        
-            $current_date = date("Y-m-d");
-            $return_date = date('Y-m-d', strtotime($current_date. ' +7 day'));
 
             echo
             '<hr>
@@ -41,14 +43,13 @@
                     <br>
 
                     <label for="membership" class="form-label">Tanggal Peminjaman</label>
-                        <input type="date" id="tgl_peminjaman" name="tgl_peminjaman" class="form-control inputstyle" value="'.$current_date.'" readonly>
+                        <input type="date" id="tgl_peminjaman" name="tgl_peminjaman" class="form-control inputstyle" value="'.$data_peminjaman['tgl_peminjaman'].'" readonly>
                     <br>
 
                     <label for="membership" class="form-label">Tanggal Pengembalian</label>
-                        <input type="date" id="tgl_pengembalian" name="tgl_pengembalian" class="form-control inputstyle" value="'.$return_date.'" readonly>
+                        <input type="date" id="tgl_pengembalian" name="tgl_pengembalian" class="form-control inputstyle" value="'.$data_peminjaman['tgl_pengembalian'].'" readonly>
                     <br>                    
-                        <input type="hidden" id="id_buku" name="id_buku" value="'.$data_buku['id'].'">    
-                        <input type="hidden" id="id_user" name="id_user" value="'.$data_user['id'].'"> 
+                        <input type="hidden" id="id_peminjaman" name="id_peminjaman" value="'.$data_peminjaman['id'].'">
 
                     <button type="submit" class="btn btn-success" style="float: right" name="confirm">CONFIRM</button>
                 </form>
