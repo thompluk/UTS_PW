@@ -6,6 +6,8 @@
         include('../db.php');
         // tampung nilai yang ada di from ke variabel
         // sesuaikan variabel name yang ada di registerPage.php disetiap input
+
+        $foto_user = addslashes(@file_get_contents($_FILES['foto_user']['tmp_name']));
         $email = $_POST['email'];
         $passwords = password_hash($_POST['passwords'], PASSWORD_DEFAULT);
         $name = $_POST['name'];
@@ -28,8 +30,8 @@
                 window.location = "../page/registerPage.php"
                 </script>';
         }else{
-            $query = mysqli_query($con, "INSERT INTO users(name, passwords, email) VALUES
-            ('$name', '$passwords', '$email')") or die(mysqli_error($con));
+            $query = mysqli_query($con, "INSERT INTO users(name, passwords, email,foto) VALUES
+            ('$name', '$passwords', '$email','$foto_user')") or die(mysqli_error($con));
 
             if($query){
                 echo

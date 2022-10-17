@@ -1,9 +1,11 @@
 <?php
     include '../component/sidebar.php';
-    include( '../db.php');
-
-    $query_user = mysqli_query($con, "SELECT * FROM users WHERE id = ". $_SESSION['user']['id'])or die(mysqli_error($con));
-    $user = mysqli_fetch_assoc($query_user);
+    
+    $user = $_SESSION['user'];
+    $image = base64_encode($user['foto']);
+    $name = $user['name'];
+    $email = $user['email'];
+    $password = $user['passwords'];
 
     if($user['name'] == "admin"){
       
@@ -18,8 +20,7 @@
                                 <h4>Profile Admin</h4>
                                     <hr>
                                     <div class="d-flex flex-column align-items-center text-center">
-                                        <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Admin" class="rounded-circle p-1 bg-primary" width="110">
-                                        
+                                        <img src="data:image/jpeg;base64,'.$image.'" alt=""" class="rounded-circle p-1 bg-primary" width="200">
                                             <p class="mb-2"></p>
                                             <p class="fw-bold fs-4 mb-2 ">ADMIN</p>
                                             <p class="text-muted font-size-sm">ATMA JAYA YOGYAKARTA</p>
@@ -48,7 +49,7 @@
                                 <h4>Profile</h4>
                                     <hr>
                                     <div class="d-flex flex-column align-items-center text-center">
-                                        <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Admin" class="rounded-circle p-1 bg-primary" width="110">
+                                    <img src="data:image/jpeg;base64,'.$image.'" alt=""" class="rounded-circle p-1 bg-primary" width="200">
                                         <div class="mt-3">
                                             <h4>'.$user['name'].'</h4>
                                             <p class="text-secondary mb-1">Mahasiswa</p>
@@ -81,8 +82,31 @@
                 </div>
             </div>
         </div>
+
+        <style>
+        body{
+            background: #f7f7ff;
+            margin-top:20px;
+        }
+        .card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            word-wrap: break-word;
+            background-color: #fff;
+            background-clip: border-box;
+            border: 0 solid transparent;
+            border-radius: .25rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 6px 0 rgb(218 218 253 / 65%), 0 2px 6px 0 rgb(206 206 238 / 54%);
+        }
+        .me-2 {
+            margin-right: .5rem!important;
+        }
+        </style>
         ';
+        
     }
     
 ?>
-

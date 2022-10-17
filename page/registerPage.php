@@ -27,7 +27,7 @@
                 <div class="card text-black bg-light ma-5 shadow " style="min-width:25rem;">
                     <div class="card-header fw-bold text-center" style="font-size: 30px;">Register</div>
                         <div class="card-body">
-                            <form action="../process/registerProcess.php" method="post">
+                            <form action="../process/registerProcess.php" method="post" enctype="multipart/form-data">
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="formlabel">Name</label>
                                     <input class="form-control" id="name" name="name" aria-describedby="emailHelp">
@@ -39,6 +39,10 @@
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="formlabel">Password</label>
                                     <input type="password" class="form-control" id="passwords" name="passwords">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="customFile" class="form-label">Upload</label>
+                                    <input type="file" class="form-control" id="foto_user" name="foto_user"/>
                                 </div>
                                 <div class="d-grid gap-2">
                                     <button type="submit" class="btn loginBtn" name="register">Register</button>

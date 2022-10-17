@@ -18,13 +18,7 @@ $user = mysqli_fetch_assoc($query);
                         <h4>Edit Profile</h4>
                             <hr>
                             <div class="d-flex flex-column align-items-center text-center">
-                                <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Admin" class="rounded-circle p-1 bg-primary" width="110">
                                 
-                                <div class="mt-3">
-                                    <h4>(Nama Login)</h4>
-                                    <p class="text-secondary mb-1">Mahasiswa</p>
-                                    <p class="text-muted font-size-sm">ATMA JAYA YOGYAKARTA</p>
-                                </div>
                             </div>
                             <hr class="my-4">
                             <div class="row mb-3">
@@ -43,11 +37,11 @@ $user = mysqli_fetch_assoc($query);
                                 <input class="form-control" id="email" name="email" aria-describedby="emailHelp" value="<?php echo $user['email']?>">
                                 </div>
                             </div>
-                            <div class="d-grid gap-2">
+
                             <button type="submit" class="btn btn-dark" name="save">Save
                                 <a href="../page/profileUserPage.php"></a>
                             </button>
-                            </div>
+                            
                                 </form>    
                             </div>
                         </div>

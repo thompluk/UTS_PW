@@ -18,7 +18,7 @@ $user = mysqli_fetch_assoc($query);
                         <h4>Edit Profile</h4>
                             <hr>
                             <div class="d-flex flex-column align-items-center text-center">
-                                <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Admin" class="rounded-circle p-1 bg-primary" width="110">
+
                                 
                                 <p class="mb-2"></p>
                                     <p class="fw-bold fs-4 mb-2 ">ADMIN</p>
