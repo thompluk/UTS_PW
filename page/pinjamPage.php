@@ -50,7 +50,7 @@
                         <input type="hidden" id="id_buku" name="id_buku" value="'.$data_buku['id'].'">    
                         <input type="hidden" id="id_user" name="id_user" value="'.$data_user['id'].'"> 
 
-                    <button type="submit" class="btn btn-success" style="float: right" name="confirm">CONFIRM</button>
+                    <button type="submit" class="btn btn-success" style="float: right" name="confirm">KONFIRMASI PEMINJAMAN</button>
                 </form>
                 
             </div>                                                                                                                                                      

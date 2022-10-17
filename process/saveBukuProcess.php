@@ -7,7 +7,7 @@ if(isset($_POST['save'])){
         $penulis = $_POST['penulis'];
         $tahun_terbit = $_POST['tahun_terbit'];
         $stok = $_POST['stok'];
-        
+
         $gambar = $_FILES['gambar']['name'];
         $location_temp = $_FILES['gambar']['tmp_name'];
         $uploads_dir = 'uploads/'.$gambar;
@@ -24,13 +24,13 @@ if(isset($_POST['save'])){
         if($query){
             echo
             '<script>
-            alert("Create Buku Success");
+            alert("Tambah Buku Success");
             window.location = "../page/listBukuPage.php"
             </script>';
         }else{
             echo
             '<script>
-            alert("Create Buku Failed");
+            alert("Tambah Buku Failed");
             window.location = "../page/listBukuPage.php"
             </script>';
         }

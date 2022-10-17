@@ -122,7 +122,7 @@ solid #114ec88d; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0
                         ';
                     }else{
                         echo'
-                            <td style="font-color: #FF0000;">Buku dihapus Admin</td>
+                            <td style="color: #FF0000;">Buku dihapus Admin</td>
                         ';
                     }
                     echo'

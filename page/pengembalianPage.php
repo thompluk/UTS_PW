@@ -51,7 +51,7 @@
                     <br>                    
                         <input type="hidden" id="id_peminjaman" name="id_peminjaman" value="'.$data_peminjaman['id'].'">
 
-                    <button type="submit" class="btn btn-success" style="float: right" name="confirm">CONFIRM</button>
+                    <button type="submit" class="btn btn-success" style="float: right" name="confirm">KONFIRMASI PENGEMBALIAN</button>
                 </form>
                 
             </div>                                                                                                                                                      
