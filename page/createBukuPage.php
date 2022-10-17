@@ -13,7 +13,7 @@ include( '../db.php');
             <h4>TAMBAH BUKU</h4>
         </div>
         <hr>
-        <form action="../process/saveBukuProcess.php" method="post">          
+        <form action="../process/saveBukuProcess.php" method="post" enctype="multipart/form-data">          
             <label for="judul" class="form-label">Judul Buku</label>
                 <input type="text" id="judul" name="judul" class="form-control inputstyle" >
             <br>
@@ -30,8 +30,8 @@ include( '../db.php');
                 <input type="text" id="stok" name="stok" class="form-control inputstyle">
             <br>
 
-            <label for="gamber" class="form-label">Gambar</label>
-                <input type="file" class="form-control" id="gamber" name="gambar"/>
+            <label for="gambar" class="form-label">Gambar</label>
+                <input type="file" class="form-control" id="gambar" name="gambar"/>
             <br>                                                                                                                              
             <button type="submit" class="btn btn-success" style="float: right" name="save">CONFIRM</button>
         </form>        

@@ -48,9 +48,7 @@
                         <tr> <td colspan="7"> Tidak ada data </td> </tr>';
                     }else{
                         $no = 1;
-                        while($data = mysqli_fetch_assoc($query_buku)){
-                        
-                        $image = base64_encode($data['foto']);
+                        while($data = mysqli_fetch_assoc($query_buku)){                      
                         
                         echo'        
                         <tr>
@@ -59,7 +57,7 @@
                             <td>'.$data['penulis'].'</td>
                             <td>'.$data['tahun_terbit'].'</td>
                             <td>'.$data['stok'].'</td>
-                            <td><img src="data:image/jpeg;base64,'.$image.'" alt="pic" style="width:100px; height:100px;"></td>
+                            <td><img src="../process/uploads/'.$data['gambar'].'" alt="pic" style="width: 100px; height: 100px;"></td>                            
                             <td>
                                 <form action="../page/editBukuPage.php" method="post">
                                     <input type="hidden" id="id_buku" name="id_buku" value="'.$data['id'].'"> 

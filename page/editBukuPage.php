@@ -36,8 +36,8 @@ include '../component/sidebar.php';
             <br>
 
             <label for="gambar" class="form-label">Gambar</label>
-                <input type="text" id="gambar" name="gambar" class="form-control inputstyle" value="'.$data_buku['gambar'].'">
-            <br>
+                <input type="file" id="gambar" name="gambar" class="form-control inputstyle value="<img src="../process/uploads/'.$data_buku['gambar'].'">">
+                <br>
             <input type="hidden" id="id_buku" name="id_buku" value="'.$data_buku['id'].'">                            
             <button type="submit" class="btn btn-success" style="float: right" name="save">CONFIRM</button>
         </form>

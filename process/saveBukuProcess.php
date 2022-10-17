@@ -7,7 +7,12 @@ if(isset($_POST['save'])){
         $penulis = $_POST['penulis'];
         $tahun_terbit = $_POST['tahun_terbit'];
         $stok = $_POST['stok'];
-        $gambar = addslashes(@file_get_contents($_FILES['gambar']['tmp_name']));
+        $gambar = $_FILES['gambar']['name'];
+        $location_temp = $_FILES['gambar']['tmp_name'];
+        $uploads_dir = 'uploads/'.$gambar;
+
+        move_uploaded_file($location_temp,$uploads_dir);
+        // $gambar = file_get_contents($_POST['gambar']);
 
         $query = mysqli_query($con,
             "INSERT INTO buku(judul, penulis, tahun_terbit, stok, gambar) 
