@@ -16,9 +16,10 @@ include '../component/sidebar.php';
         $id_buku = $_POST['id_buku'];
         $query_buku = mysqli_query($con, "SELECT * FROM buku WHERE id='$id_buku'") or die(mysqli_error($con));
         $data_buku = mysqli_fetch_assoc($query_buku);
+        $image = base64_encode($user_login['foto']);
         
         echo'
-        <form action="../process/editBukuProcess.php" method="post">          
+        <form action="../process/editBukuProcess.php" method="post" enctype="multipart/form-data">          
             <label for="judul" class="form-label">Judul Buku</label>
                 <input type="text" id="judul" name="judul" class="form-control inputstyle" value="'.$data_buku['judul'].'">
             <br>
@@ -36,9 +37,11 @@ include '../component/sidebar.php';
             <br>
 
             <label for="gambar" class="form-label">Gambar</label>
-                <input type="file" id="gambar" name="gambar" class="form-control inputstyle value="<img src="../process/uploads/'.$data_buku['gambar'].'">">
-                <br>
-            <input type="hidden" id="id_buku" name="id_buku" value="'.$data_buku['id'].'">                            
+                <input type="file" id="gambar" name="gambar" class="form-control">
+            <br>
+
+            <input type="hidden" id="id_buku" name="id_buku" value="'.$data_buku['id'].'"> 
+
             <button type="submit" class="btn btn-success" style="float: right" name="save">CONFIRM</button>
         </form>
               

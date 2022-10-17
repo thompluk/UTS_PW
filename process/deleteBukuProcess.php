@@ -4,7 +4,7 @@
         session_start();
         $id_buku = $_POST['id_buku'];
 
-        $query_check = mysqli_query($con, "SELECT * FROM peminjaman WHERE id_buku='$id_buku'") or
+        $query_check = mysqli_query($con, "SELECT * FROM peminjaman WHERE id_buku='$id_buku' AND status='1'") or
         die(mysqli_error($con));
 
         if(mysqli_num_rows($query_check) == 0){

@@ -27,7 +27,7 @@
                 <h4>LIST BUKU</h4>
             </div>
             <hr>
-            <form action="../page/createBukuPage.php" method="post">
+            
                 <table class="table ">
                 <thead>
                     <tr>
@@ -77,7 +77,8 @@
                     echo' 
                 </tbody>
             </table>
-            <button type="submit" class="btn btn-success" name="create">Tambah Buku</button>
+            <form action="../page/createBukuPage.php" method="post">
+                <button type="submit" class="btn btn-success" name="create">Tambah Buku</button>
             </form>
         </div>
         </aside>
@@ -128,8 +129,7 @@
                             <td>'.$data['penulis'].'</td>
                             <td>'.$data['tahun_terbit'].'</td>
                             <td>'.$data['stok'].'</td>
-                            <td><img src="'.$data['gambar'].'" alt="pic" style="width:50px; height:100px;"></td>
-                            <td>
+                            <td><img src="../process/uploads/'.$data['gambar'].'" alt="pic" style="width: 100px; height: 100px;"></td>                            <td>
                             ';
                             if($data['stok'] == 0){
                                 echo'                                

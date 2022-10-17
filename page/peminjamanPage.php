@@ -50,8 +50,18 @@ solid #114ec88d; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0
                     echo'
                     <tr>
                     <th scope="row">'.$no.'</th>
-                    <td>'.$data_user['name'].'</td>
-                    <td>'.$data_buku['judul'].'</td>
+                    <td>'.$data_user['name'].'</td>';
+
+                    if($data_buku!=null){
+                        echo'
+                            <td>'.$data_buku['judul'].'</td>
+                        ';
+                    }else{
+                        echo'
+                            <td>Buku dihapus Admin</td>
+                        ';
+                    }
+                    echo'
                     <td>'.$data['tgl_peminjaman'].'</td>
                     <td>'.$data['tgl_pengembalian'].'</td>
                     ';
@@ -104,8 +114,19 @@ solid #114ec88d; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0
 
                     echo'
                     <tr>
-                    <th scope="row">'.$no.'</th>
-                    <td>'.$data_buku['judul'].'</td>
+                    <th scope="row">'.$no.'</th>';
+
+                    if($data_buku!=null){
+                        echo'
+                            <td>'.$data_buku['judul'].'</td>
+                        ';
+                    }else{
+                        echo'
+                            <td style="font-color: #FF0000;">Buku dihapus Admin</td>
+                        ';
+                    }
+                    echo'
+
                     <td>'.$data['tgl_peminjaman'].'</td>
                     <td>'.$data['tgl_pengembalian'].'</td>
                     ';

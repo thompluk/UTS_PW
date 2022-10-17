@@ -7,6 +7,7 @@ if(isset($_POST['save'])){
         $penulis = $_POST['penulis'];
         $tahun_terbit = $_POST['tahun_terbit'];
         $stok = $_POST['stok'];
+        
         $gambar = $_FILES['gambar']['name'];
         $location_temp = $_FILES['gambar']['tmp_name'];
         $uploads_dir = 'uploads/'.$gambar;

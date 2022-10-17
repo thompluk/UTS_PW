@@ -24,7 +24,7 @@
                                 <h4>Profile Admin</h4>
                                     <hr>
                                     <div class="d-flex flex-column align-items-center text-center">
-                                        <img src="data:image/jpeg;base64,'.$image.'" alt=""" class="rounded-circle p-1 bg-primary" width="200">
+                                        <img src="data:image/jpeg;base64,'.$image.'" alt=""" class="rounded-circle p-1 bg-primary" style="width: 150px; height: 150px;">
                                             <p class="mb-2"></p>
                                             <p class="fw-bold fs-4 mb-2 ">ADMIN</p>
                                             <p class="text-muted font-size-sm">ATMA JAYA YOGYAKARTA</p>

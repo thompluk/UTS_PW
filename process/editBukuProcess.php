@@ -7,10 +7,15 @@
         $penulis = $_POST['penulis'];
         $tahun_terbit = $_POST['tahun_terbit'];
         $stok = $_POST['stok'];
-        $gambar = $_POST['gambar'];
         
+        $gambar = $_FILES['gambar']['name'];
+        $location_temp = $_FILES['gambar']['tmp_name'];
+        $uploads_dir = 'uploads/'.$gambar;
+
+        move_uploaded_file($location_temp,$uploads_dir);
+
         $query = mysqli_query($con, "UPDATE buku SET judul = '$judul', penulis = '$penulis', tahun_terbit = '$tahun_terbit', stok = '$stok', gambar = '$gambar'
-        WHERE id = '$id';") or die(mysqli_error($con));
+            WHERE id = '$id';") or die(mysqli_error($con));
 
         if($query){
             echo
