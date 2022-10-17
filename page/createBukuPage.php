@@ -30,9 +30,9 @@ include( '../db.php');
                 <input type="text" id="stok" name="stok" class="form-control inputstyle">
             <br>
 
-            <label for="gambar" class="form-label">Gambar</label>
-                <input type="text" id="gambar" name="gambar" class="form-control inputstyle">
-            <br>                           
+            <label for="gamber" class="form-label">Gambar</label>
+                <input type="file" class="form-control" id="gamber" name="gambar"/>
+            <br>                                                                                                                              
             <button type="submit" class="btn btn-success" style="float: right" name="save">CONFIRM</button>
         </form>        
     </div>

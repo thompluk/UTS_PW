@@ -2,11 +2,13 @@
 if(isset($_POST['save'])){
         include('../db.php');
         session_start();
+
         $judul = $_POST['judul'];
         $penulis = $_POST['penulis'];
         $tahun_terbit = $_POST['tahun_terbit'];
         $stok = $_POST['stok'];
-        $gambar = $_POST['gambar'];
+        $gambar = addslashes(@file_get_contents($_FILES['gambar']['tmp_name']));
+
         $query = mysqli_query($con,
             "INSERT INTO buku(judul, penulis, tahun_terbit, stok, gambar) 
                 VALUES
