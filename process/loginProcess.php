@@ -27,7 +27,7 @@
                 $_SESSION['user'] = $user;
                 echo
                     '<script>
-                    alert("Login Success"); window.location = "../page/peminjamanPage.php"
+                    alert("Login Success"); window.location = "../page/listBukuPage.php"
                     </script>';
             }else {
                 echo

@@ -1,10 +1,11 @@
 <?php
 session_start();
 if (!$_SESSION['isLogin']) {
-header("location: ../page/loginPage.php");
+    header("location: ../page/loginPage.php");
 }else {
-include('../db.php');
+    include('../db.php');
 }
+
 echo '
 <!Doctype html>
 <html lang="en">
@@ -101,7 +102,9 @@ echo '
                                     <i class="fa fa-arrow-right-from-bracket"></i>
                                     <a href="../process/logoutProcess.php" style="font-weight:500">Logout</a>
                                 </div>
-                            </div>
+                            </div>                      
+                        <hr>
+                            <h5  class="text-center text-light">'.$_SESSION['user']['name'].'                            
                         <hr>
                 </div>
                 '
