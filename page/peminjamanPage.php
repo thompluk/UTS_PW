@@ -122,7 +122,7 @@ solid #114ec88d; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0
                     echo'
                         <td>
                             <form action="../page/pengembalianPage.php" method="post"> 
-                                <input type="hidden" id="id_buku" name="id_buku" value="'.$data['id'].'">
+                                <input type="hidden" id="id_buku" name="id_buku" value="'.$data_buku['id'].'">
                                 <button type="submit" class="btn btn-primary">KEMBALIKAN</button>
                             </form>
                         </td>
