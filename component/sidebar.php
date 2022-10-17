@@ -6,6 +6,10 @@ if (!$_SESSION['isLogin']) {
     include('../db.php');
 }
 
+$id = $_SESSION['user']['id'];
+$query = mysqli_query($con, "SELECT * FROM users WHERE id = '$id'") or die(mysqli_error($con));
+$user_login = mysqli_fetch_assoc($query);
+
 echo '
 <!Doctype html>
 <html lang="en">
@@ -104,7 +108,7 @@ echo '
                                 </div>
                             </div>                      
                         <hr>
-                            <h5  class="text-center text-light">'.$_SESSION['user']['name'].'                            
+                            <h5  class="text-center text-light">'.$user_login['name'].'                            
                         <hr>
                 </div>
                 '

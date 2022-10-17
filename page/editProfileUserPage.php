@@ -7,7 +7,9 @@ $user = mysqli_fetch_assoc($query);
 ?>
 
 <hr>
-    <div class="container p-3 m-4 h-100">
+        <div class="container p-3 m-4 h-100" style="background-color: #FFFFFF; border-top: 10px
+        solid #114ec88d; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0,
+        0.19);">
         <div class="main-body">
             <div class="row">
                 <div class="col-lg-8">
@@ -16,7 +18,6 @@ $user = mysqli_fetch_assoc($query);
                         <form action="../process/editUserProcess.php" method="post">
                           
                         <h4>Edit Profile</h4>
-                            <hr>
                             <div class="d-flex flex-column align-items-center text-center">
                                 
                             </div>
@@ -38,9 +39,7 @@ $user = mysqli_fetch_assoc($query);
                                 </div>
                             </div>
 
-                            <button type="submit" class="btn btn-dark" name="save">Save
-                                <a href="../page/profileUserPage.php"></a>
-                            </button>
+                            <button type="submit" class="btn btn-success" name="save">Save</button>
                             
                                 </form>    
                             </div>
