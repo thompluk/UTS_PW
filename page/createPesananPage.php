@@ -2,10 +2,6 @@
 include '../component/sidebar.php'
 ?>
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
-
 <div class="container p-3 m-4 h-100" style="background-color: #FFFFFF; border-top: 10px
         solid #114ec88d; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0,
         0.19);">
@@ -16,11 +12,11 @@ include '../component/sidebar.php'
 
         <div class="mb-3">
             <label for="nama_pemesan" class="form-label">Nama Pemesan</label>
-            <input class="form-control" id="nama_pemesan" name="nama_pemesan" aria-describedby="emailHelp">
+            <input class="form-control" id="nama_pemesan" name="nama_pemesan" aria-describedby="emailHelp" required>
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Tipe Meja</label>
-            <select class="form-select" aria-label="multiple select example" name="tipe_meja[]" id="tipe_meja">
+            <select class="form-select" aria-label="multiple select example" name="tipe_meja[]" id="tipe_meja" required>
                 
                 <option value="Persegi">Persegi</option>
                 <option value="Lingkaran">Lingkaran</option>
@@ -31,7 +27,7 @@ include '../component/sidebar.php'
 
         <div class="mb-3">
             <label for="tgl_reservasi" class="form-label">Tanggal Reservasi</label>
-            <input type="date" class="form-control" id="tgl_reservasi" name="tgl_reservasi">
+            <input type="date" class="form-control" id="tgl_reservasi" name="tgl_reservasi" required>
         </div>
 
         <div class="d-grid gap-2">

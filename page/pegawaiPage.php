@@ -8,9 +8,6 @@
 
 <div class="body d-flex justify-content-between">
     <h4>LIST PEGAWAI</h4>
-    <div class="content-menu ">
-      <a href="./createPegawaiPage.php" style="color:#114ec88d" class="fa fa-plus-square fa-2x"></a>
-    </div>
   </div>
 
   <hr>
@@ -52,6 +49,9 @@ die(mysqli_error($con));
         ?>
     </tbody>
   </table>
+    <form action="../page/createPegawaiPage.php" method="post">
+      <button type="submit" class="btn btn-success" name="create">Tambah Pegawai</button>
+    </form>
 </div>
 </aside>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

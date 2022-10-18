@@ -67,11 +67,11 @@ solid #114ec88d; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0
                     ';
                     if($data['status'] == 1){
                         echo'
-                            <td>Belum dikembalikan</td>
+                            <td style="color: #fb8500">Belum dikembalikan</td>
                         ';    
                     }else{
                         echo'
-                            <td>Sudah dikembalikan</td>
+                            <td style="color: #007200;">Sudah dikembalikan</td>
                         ';                         
                     }       
                     $no++;
@@ -136,8 +136,8 @@ solid #114ec88d; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0
 
                     if($data['status'] == 1){
                         echo'
-                            <td>Belum dikembalikan</td>
-                            <td>
+                        <td style="color: #fb8500">Belum dikembalikan</td>
+                        <td>
                             <form action="../page/pengembalianPage.php" method="post"> 
                                 <input type="hidden" id="id" name="id" value="'.$data['id'].'">
                                 <button type="submit" class="btn btn-primary">KEMBALIKAN</button>
@@ -147,8 +147,8 @@ solid #114ec88d; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0
                         ';    
                     }else{
                         echo'
-                            <td>Sudah dikembalikan</td>
-                            <td>
+                        <td style="color: #007200;">Sudah dikembalikan</td>
+                        <td>
                             <form action="../page/pengembalianPage.php" method="post"> 
                                 <input type="hidden" id="id" name="id" value="'.$data['id'].'">
                                 <button type="submit" class="btn btn-primary" disabled>KEMBALIKAN</button>
