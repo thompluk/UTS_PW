@@ -16,7 +16,7 @@
     <nav class="navbar navbar-light fixed-top">
         <div class="container">
             <!-- Nama : nama panggilan kalian -->
-            <a class="navbar-brand fw-bold" href="/UTS_PW-1"><img src="./asset/logo.png" alt="logo" style="width:35px"> E-Library</a>
+            <a class="navbar-brand fw-bold" href="/UTS_PW"><img src="../asset/logo.png" alt="logo" style="width:35px"> E-Library</a>
     </nav>
         <div class="bg">
             <div class="container min-vh-100 d-flex align-items-center justify-content-center">

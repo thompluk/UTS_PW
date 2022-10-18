@@ -2,7 +2,7 @@
 
 .bg {
     background-color: #f8f9fa;
-    background-image: url("../UTS_PW-1/asset/landingPageBg.jpg");
+    background-image: url("../UTS_PW/asset/landingPageBg.jpg");
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -14,7 +14,7 @@
 }
 
 .logo{
-    background-image: url("../UTS_PW-1/asset/logo.png");
+    background-image: url("../UTS_PW/asset/logo.png");
 }
 
 h2.landingTitle{
