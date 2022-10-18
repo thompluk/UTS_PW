@@ -7,7 +7,8 @@ $qry = mysqli_query($con,"SELECT * from pemesanan where id='$id'");
 
 $data = mysqli_fetch_assoc($qry);
 
-$nama_pemesan = $data["nama_pemesan"];
+$nama_pemesan = $data['nama_pemesan'];
+$tgl_reservasi = $data['tgl_reservasi'];
 $_SESSION['tipe_meja_pemesanan'] =$data["tipe_meja"];
 
 ?>
@@ -19,29 +20,17 @@ $_SESSION['tipe_meja_pemesanan'] =$data["tipe_meja"];
 
   <form action="../process/editPesananProcess.php?id=<?php echo $id; ?>" method="post">
     <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Nama Pemesan</label>
+      <label for="nama_pemesan" class="form-label">Nama Pemesan</label>
       <input class="form-control" id="nama_pemesan" name="nama_pemesan" value="<?php echo (isset($nama_pemesan)) ? $nama_pemesan: ''?>"
         aria-describedby="emailHelp">
     </div>
 
     <div class="multi_select_box">
-      <label for="exampleInputEmail1" class="form-label">Tipe Meja</label>
-      <div class="mb-3"><?php
-      
-      $query = mysqli_query($con, "SELECT * FROM pemesanan WHERE id='$id'") or
-die(mysqli_error($con));
-                while($data = mysqli_fetch_assoc($query)){
-                echo'
-                <tr>
-                <td>
-                    <td>'.$data['tipe_meja'].'</td>   
-                </td>                
-                </tr>';
-            }  
-            
-        ?>
-        </div> 
-        <select name=" tipe_meja[]" id="tipe_meja" class="form-control" aria-label="multiple select example" value=<?php
+      <label for="tipe_meja" class="form-label">Tipe Meja</label>
+      <div class="mb-3">
+        <select name=" tipe_meja[]" id="tipe_meja" class="form-control" aria-label="multiple select example" 
+                value=
+                <?php
                     $array = array("Persegi", "Lingkaran", "Persegi Panjang", "Lesehan");
                     session_start();
                     $pilihMeja = $_SESSION['tipe_meja_pemesanan'];
@@ -56,9 +45,16 @@ die(mysqli_error($con));
                              echo "<option value='".$nama_pemesan."'>".$nama_pemesan."</option>";
                         }
                     }
-                ?>> </select>
+                ?>></select>
     </div>
 
+    <div class="mb-3">
+      <label for="tgl_reservasi" class="form-label">Tanggal Pemesanan</label>
+      <input type="date" class="form-control" id="tgl_reservasi" name="tgl_reservasi" value="<?php echo (isset($tgl_reservasi)) ? $tgl_reservasi: ''?>"
+        aria-describedby="emailHelp">
+    </div>
+
+    <br>
     <div class="d-grid gap-2">
       <button type="submit" class="btn btn-primary" name="edit">Edit Pesanan</button>
     </div>

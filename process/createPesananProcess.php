@@ -6,12 +6,13 @@ if (isset($_POST['register'])) {
 
     $nama = $_POST['nama_pemesan'];
     $tipe_meja = implode(", ", $_POST["tipe_meja"]);
+    $tgl_reservasi = $_POST['tgl_reservasi'];
     
     $query = mysqli_query(
         $con,
-        "INSERT INTO pemesanan(nama_pemesan, tipe_meja)
+        "INSERT INTO pemesanan(nama_pemesan, tipe_meja, tgl_reservasi)
  VALUES
- ('$nama', '$tipe_meja')"
+ ('$nama', '$tipe_meja', '$tgl_reservasi')"
     )
         or die(mysqli_error($con));
 

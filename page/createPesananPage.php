@@ -15,7 +15,7 @@ include '../component/sidebar.php'
     <form action="../process/createPesananProcess.php" method="post">
 
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Nama Pemesan</label>
+            <label for="nama_pemesan" class="form-label">Nama Pemesan</label>
             <input class="form-control" id="nama_pemesan" name="nama_pemesan" aria-describedby="emailHelp">
         </div>
         <div class="mb-3">
@@ -27,6 +27,11 @@ include '../component/sidebar.php'
                 <option value="Persegi Panjang">Persegi Panjang</option>
                 <option value="Lesehan">Lesehan</option>
             </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="tgl_reservasi" class="form-label">Tanggal Reservasi</label>
+            <input type="date" class="form-control" id="tgl_reservasi" name="tgl_reservasi">
         </div>
 
         <div class="d-grid gap-2">

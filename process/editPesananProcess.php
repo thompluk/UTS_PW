@@ -6,10 +6,11 @@ if (isset($_POST['edit'])) {
 
     $nama_pemesan = $_POST['nama_pemesan'];
     $tipe_meja = implode(", ", $_POST["tipe_meja"]);
+    $tgl_reservasi = $_POST['tgl_reservasi'];
     
     $query = mysqli_query(
         $con,
-        "UPDATE pemesanan SET nama_pemesan = '$nama_pemesan', tipe_meja = '$tipe_meja' WHERE id='$id'"
+        "UPDATE pemesanan SET nama_pemesan = '$nama_pemesan', tipe_meja = '$tipe_meja', tgl_reservasi = '$tgl_reservasi' WHERE id='$id'"
     )
         or die(mysqli_error($con)); 
 

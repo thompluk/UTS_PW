@@ -26,6 +26,7 @@
         <th scope="col">No</th>
         <th scope="col">Nama Pemesan</th>
         <th scope="col">Tipe Meja</th>
+        <th scope="col">Tanggal Reservasi</th>
         <th scope="col"></th>
       </tr>
     </thead>
@@ -44,6 +45,7 @@ die(mysqli_error($con));
                     <th scope="row">'.$no.'</th>
                     <td>'.$data['nama_pemesan'].'</td>
                     <td>'.$data['tipe_meja'].'</td>
+                    <td>'.$data['tgl_reservasi'].'</td>
                     ';
                    if($_SESSION['user']['name'] != "admin"){
                     echo'
