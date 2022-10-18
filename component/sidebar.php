@@ -109,10 +109,9 @@ echo '
                                 }
                                 echo'
                                 <div class="content-menu" >
-                                    <i class="fa fa-user"></i>
-                                    <a href="./profileUsersPage.php" style="font-weight:500">Profile</a>
+                                    <i class="fa fa-table"></i>
+                                    <a href="./pesanTempatPage.php" style="font-weight:500">Pesan Tempat</a>
                                 </div>
-
                                 <div class="content-menu" >
                                     <i class="fa fa-arrow-right-from-bracket"></i>
                                     <a href="../process/logoutProcess.php" style="font-weight:500">Logout</a>
