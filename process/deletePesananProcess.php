@@ -7,12 +7,12 @@ if(isset($_GET['id'])){
      if($queryDelete){
         echo
         '<script>
-    alert("Delete Success"); window.location = "../page/pesanTempatPage.php"
+    alert("Berhasil menghapus reservasi"); window.location = "../page/pesanTempatPage.php"
 </script>';
     }else{
         echo
         '<script>
-    alert("Delete Failed"); window.location = "../page/pesanTempatPage.php"
+    alert("Gagal menghapus reservasi"); window.location = "../page/pesanTempatPage.php"
 </script>';
     }
 }else {

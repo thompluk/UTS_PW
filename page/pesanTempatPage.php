@@ -47,12 +47,12 @@ die(mysqli_error($con));
                     <td>'.$data['tipe_meja'].'</td>
                     <td>'.$data['tgl_reservasi'].'</td>
                     ';
-                   if($_SESSION['user']['name'] != "admin"){
+                   if($_SESSION['user']['name'] == "admin"){
                     echo'
                     <td>
                     <a href="./editPesananPage.php? id=' . $data['id'] . '"><i style="color: black" class="fa fa-edit fa-2x"></i></a>
                         <a href="../process/deletePesananProcess.php?id='.$data['id'].'"
-                          onClick="return confirm ( \'Are you sure want to delete this data?\')">                          
+                          onClick="return confirm ( \'Anda yakin ingin menghapus reservasi?\')">                          
                           <i style="color: red" class="fa fa-trash fa-2x"></i>
                         </a>
                     </td>';
