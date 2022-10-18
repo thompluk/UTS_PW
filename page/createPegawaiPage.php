@@ -20,6 +20,15 @@
             <label for="exampleInputEmail1" class="form-label">Telepon</label>
             <input class="form-control" id="telepon" name="telepon" aria-describedby="emailHelp">
         </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Role</label>
+            <select class="form-select" aria-label="multiple select example" name="role[]" id="role" required>
+                
+                <option value="Penjaga">Penjaga</option>
+                <option value="Admin">Admin</option>
+                <option value="Layanan">Layanan</option>
+            </select>
+        </div>
         <div class="d-grid gap-2">
             <button type="submit" class="btn btn-primary" name="register">Tambah Pegawai</button>
         </div>

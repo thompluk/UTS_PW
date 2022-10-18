@@ -9,8 +9,9 @@
         // sesuaikan variabel name yang ada di registerPage.php disetiap input
         $name = $_POST['name'];
         $email = $_POST['email'];
+        $passwords = password_hash($_POST['passwords'], PASSWORD_DEFAULT);
 
-        $query = mysqli_query($con,"UPDATE users SET email='$email', name='$name' WHERE id = ". $_SESSION['user']['id']);
+        $query = mysqli_query($con,"UPDATE users SET email='$email', name='$name', passwords='$passwords' WHERE id = ". $_SESSION['user']['id']);
 
         if($query){
             echo

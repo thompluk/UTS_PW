@@ -39,6 +39,15 @@ $user = mysqli_fetch_assoc($query);
                                 </div>
                             </div>
 
+                            <div class="row mb-3">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Password</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                <input class="form-control" id="passwords" name="passwords" aria-describedby="emailHelp"? required>
+                            </div>
+                        </div>
+
                             <button type="submit" class="btn btn-success" name="save">Save</button>
                             
                                 </form>    

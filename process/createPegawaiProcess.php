@@ -6,12 +6,13 @@ if (isset($_POST['register'])) {
     
     $name = $_POST['nama'];
     $telepon = $_POST['telepon'];
+    $role = implode(", ", $_POST["role"]);
     
     $query = mysqli_query(
         $con,
-        "INSERT INTO pegawai(nama, telepon)
+        "INSERT INTO pegawai(nama, telepon,role)
  VALUES
- ('$name','$telepon')"
+ ('$name','$telepon','$role')"
     )
         or die(mysqli_error($con)); // perintah mysql yang gagal dijalankan ditangani oleh perintah “or die”
 

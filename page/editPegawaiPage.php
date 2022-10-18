@@ -6,8 +6,10 @@ $id = $_GET['id'];
 $qry = mysqli_query($con,"SELECT * from pegawai where id='$id'"); 
 
 $data = mysqli_fetch_assoc($qry);
+
 $nama = $data["nama"];
 $telepon = $data["telepon"];
+$_SESSION['roles'] =$data["role"];
 
 ?>
 
@@ -26,6 +28,30 @@ $telepon = $data["telepon"];
       <label for="exampleInputPassword1" class="form-label">Telepon</label>
       <input class="form-control" id="telepon" name="telepon"
         value=" <?php echo (isset($telepon)) ? $telepon: ''?>" aria-describedby="emailHelp">
+    </div>
+
+    <div class="multi_select_box">
+      <label for="role" class="form-label">Role</label>
+      <div class="mb-3">
+        <select name=" role[]" id="role" class="form-control" aria-label="multiple select example" 
+                value=
+                <?php
+                    $array = array("Penjaga", "Admin", "Layanan");
+                    session_start();
+                    $pilihMeja = $_SESSION['roles'];
+                    foreach($array as $value=>$nama)
+                    {
+                        if($nama == $pilihMeja)
+                        {
+                             echo "<option selected value='".$nama."'>".$nama."</option>";
+                        }
+                        else
+                        {
+                             echo "<option value='".$nama."'>".$nama."</option>";
+                        }
+                    }
+                ?>></select>
+      </div>
     </div>
 
     <div class="d-grid gap-2">

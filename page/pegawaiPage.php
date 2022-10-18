@@ -17,6 +17,7 @@
         <th scope="col">No</th>
         <th scope="col">Nama</th>
         <th scope="col">Telepon</th>
+        <th scope="col">Role</th>
         <th scope="col"></th>
       </tr>
     </thead>
@@ -35,6 +36,7 @@ die(mysqli_error($con));
                     <th scope="row">'.$no.'</th>
                     <td>'.$data['nama'].'</td>
                     <td>'.$data['telepon'].'</td>
+                    <td>'.$data['role'].'</td>
                     <td>
                     <a href="./editPegawaiPage.php? id=' . $data['id'] . '"><i style="color: black" class="fa fa-edit fa-2x"></i></a>
                         <a href="../process/deletePegawaiProcess.php?id='.$data['id'].'"
