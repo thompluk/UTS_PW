@@ -18,12 +18,12 @@ if (isset($_POST['register'])) {
     if ($query) {
         echo
         '<script>
-            alert("Create Series Success"); window.location = "../page/pesanTempatPage.php"
+            alert("Meja berhasil direservasi"); window.location = "../page/pesanTempatPage.php"
             </script>';
     } else {
         echo
         '<script>
-            alert("Create Series Failed");
+            alert("Meja gagal direservasi);
             </script>';
     }
 } else {

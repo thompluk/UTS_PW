@@ -9,7 +9,7 @@
 <div class="body d-flex justify-content-between">
     <h4>LIST PEGAWAI</h4>
     <div class="content-menu ">
-      <a href="./createPegawaiPage.php" style="color:#114ec88d" class="fa fa-plus-square"></a>
+      <a href="./createPegawaiPage.php" style="color:#114ec88d" class="fa fa-plus-square fa-2x"></a>
     </div>
   </div>
 

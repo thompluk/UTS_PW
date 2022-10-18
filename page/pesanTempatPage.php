@@ -2,14 +2,20 @@
     include '../component/sidebar.php'
 ?>
 
-<div class="container p-3 m-4 h-100" style="background-color: #FFFFFF; border-top: 5px
-solid #D40013; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0,
-0.19);">
+<div class="container p-3 m-4 h-100" style="background-color: #FFFFFF; border-top: 10px
+        solid #114ec88d; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0,
+        0.19);">
 
 <div class="body d-flex justify-content-between">
-    <h4>LIST Pesanan Tempat</h4>
+    <h4>LIST RESERVASI MEJA</h4>
     <div class="content-menu ">
-      <a href="./createPesananPage.php" style="color:red" class="fa fa-plus-square"></a>
+      <?php
+      if($_SESSION['user']['name'] != "admin"){
+        echo'
+        <a href="./createPesananPage.php" style="color:#114ec88d" class="fa fa-plus-square fa-2x"></a>
+        ';
+      }
+      ?>
     </div>
   </div>
 
@@ -38,13 +44,18 @@ die(mysqli_error($con));
                     <th scope="row">'.$no.'</th>
                     <td>'.$data['nama_pemesan'].'</td>
                     <td>'.$data['tipe_meja'].'</td>
+                    ';
+                   if($_SESSION['user']['name'] != "admin"){
+                    echo'
                     <td>
-                    <a href="./editPesananPage.php? id=' . $data['id'] . '"><i style="color: black" class="fa fa-edit"></i></a>
+                    <a href="./editPesananPage.php? id=' . $data['id'] . '"><i style="color: black" class="fa fa-edit fa-2x"></i></a>
                         <a href="../process/deletePesananProcess.php?id='.$data['id'].'"
                           onClick="return confirm ( \'Are you sure want to delete this data?\')">                          
                           <i style="color: red" class="fa fa-trash fa-2x"></i>
                         </a>
-                    </td>
+                    </td>';
+                   } 
+                    echo'
                 </tr>';
             $no++;
             }

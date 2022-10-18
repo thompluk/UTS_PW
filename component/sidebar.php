@@ -106,14 +106,12 @@ echo '
                                         <i class="fa fa-person"></i>
                                         <a href="./pegawaiPage.php" style="font-weight:500">Pegawai</a>
                                     </div>';
-                                }else{
-                                    echo'
-                                    <div class="content-menu" >
-                                        <i class="fa fa-table"></i>
-                                            <a href="./pesanTempatPage.php" style="font-weight:500">Pesan Tempat</a>
-                                    </div>';       
                                 }
                                 echo'
+                                <div class="content-menu" >
+                                    <i class="fa fa-table"></i>
+                                        <a href="./pesanTempatPage.php" style="font-weight:500">Reservasi Meja</a>
+                                </div>
                                 <div class="content-menu" >
                                     <i class="fa fa-user"></i>
                                         <a href="./profileUsersPage.php" style="font-weight:500">Profile</a>
