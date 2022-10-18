@@ -103,6 +103,10 @@ echo '
                                     <a href="./profileUsersPage.php" style="font-weight:500">Profile</a>
                                 </div>
                                 <div class="content-menu" >
+                                    <i class="fa fa-person"></i>
+                                    <a href="./pegawaiPage.php" style="font-weight:500">Pegawai</a>
+                                </div>
+                                <div class="content-menu" >
                                     <i class="fa fa-arrow-right-from-bracket"></i>
                                     <a href="../process/logoutProcess.php" style="font-weight:500">Logout</a>
                                 </div>
