@@ -30,7 +30,7 @@ $user = mysqli_fetch_assoc($query);
                                     <h6 class="mb-0">Password</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                <input class="form-control" id="passwords" name="passwords" aria-describedby="emailHelp"?>
+                                <input class="form-control" id="passwords" name="passwords" aria-describedby="emailHelp"? required>
                                 </div>
                             </div>
                             <div class="d-grid gap-2">

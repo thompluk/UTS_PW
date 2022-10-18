@@ -93,6 +93,7 @@ solid #114ec88d; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0
             <tr>
                 <th scope="col">No.</th>
                 <th scope="col">Nama Buku</th>
+                <th scope="col">Gambar</th>
                 <th scope="col">Tanggal Peminjaman</th>
                 <th scope="col">Tanggal Pengembalian</th>
                 <th scope="col">Status</th>
@@ -119,14 +120,16 @@ solid #114ec88d; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0
                     if($data_buku!=null){
                         echo'
                             <td>'.$data_buku['judul'].'</td>
+                            <td><img src="../process/uploads/'.$data_buku['gambar'].'" alt="pic" style="width: 100px; height: 100px;"></td>
                         ';
                     }else{
                         echo'
                             <td style="color: #FF0000;">Buku dihapus Admin</td>
+                            <td style="color: #FF0000;">Buku dihapus Admin</td>
                         ';
                     }
                     echo'
-
+                    
                     <td>'.$data['tgl_peminjaman'].'</td>
                     <td>'.$data['tgl_pengembalian'].'</td>
                     ';

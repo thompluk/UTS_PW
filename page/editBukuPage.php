@@ -21,23 +21,23 @@ include '../component/sidebar.php';
         echo'
         <form action="../process/editBukuProcess.php" method="post" enctype="multipart/form-data">          
             <label for="judul" class="form-label">Judul Buku</label>
-                <input type="text" id="judul" name="judul" class="form-control inputstyle" value="'.$data_buku['judul'].'">
+                <input type="text" id="judul" name="judul" class="form-control inputstyle" value="'.$data_buku['judul'].'" required>
             <br>
 
             <label for="penulis" class="form-label">Penulis</label>
-                <input type="text" id="penulis" name="penulis" class="form-control inputstyle" value="'.$data_buku['penulis'].'">
+                <input type="text" id="penulis" name="penulis" class="form-control inputstyle" value="'.$data_buku['penulis'].'" required>
             <br>
 
             <label for="tahun_terbit" class="form-label">Tahun Terbit</label>
-                <input type="text" id="tahun_terbit" name="tahun_terbit" class="form-control inputstyle" value="'.$data_buku['tahun_terbit'].'">
+                <input type="text" id="tahun_terbit" name="tahun_terbit" class="form-control inputstyle" value="'.$data_buku['tahun_terbit'].'" required>
             <br>
 
             <label for="stok" class="form-label">stok</label>
-                <input type="text" id="stok" name="stok" class="form-control inputstyle" value="'.$data_buku['stok'].'">
+                <input type="text" id="stok" name="stok" class="form-control inputstyle" value="'.$data_buku['stok'].'" required>
             <br>
 
             <label for="gambar" class="form-label">Gambar</label>
-                <input type="file" id="gambar" name="gambar" class="form-control">
+                <input type="file" id="gambar" name="gambar" class="form-control" required>
             <br>
 
             <input type="hidden" id="id_buku" name="id_buku" value="'.$data_buku['id'].'"> 

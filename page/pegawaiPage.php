@@ -2,14 +2,14 @@
     include '../component/sidebar.php'
 ?>
 
-<div class="container p-3 m-4 h-100" style="background-color: #FFFFFF; border-top: 5px
-solid #D40013; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0,
-0.19);">
+<div class="container p-3 m-4 h-100" style="background-color: #FFFFFF; border-top: 10px
+        solid #114ec88d; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0,
+        0.19);">
 
 <div class="body d-flex justify-content-between">
     <h4>LIST PEGAWAI</h4>
     <div class="content-menu ">
-      <a href="./createPegawaiPage.php" style="color:red" class="fa fa-plus-square"></a>
+      <a href="./createPegawaiPage.php" style="color:#114ec88d" class="fa fa-plus-square"></a>
     </div>
   </div>
 
@@ -39,7 +39,7 @@ die(mysqli_error($con));
                     <td>'.$data['nama'].'</td>
                     <td>'.$data['telepon'].'</td>
                     <td>
-                    <a href="./editPegawaiPage.php? id=' . $data['id'] . '"><i style="color: black" class="fa fa-edit"></i></a>
+                    <a href="./editPegawaiPage.php? id=' . $data['id'] . '"><i style="color: black" class="fa fa-edit fa-2x"></i></a>
                         <a href="../process/deletePegawaiProcess.php?id='.$data['id'].'"
                           onClick="return confirm ( \'Are you sure want to delete this data?\')">                          
                           <i style="color: red" class="fa fa-trash fa-2x"></i>

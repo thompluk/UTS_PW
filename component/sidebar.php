@@ -9,6 +9,8 @@ if (!$_SESSION['isLogin']) {
 $id = $_SESSION['user']['id'];
 $query = mysqli_query($con, "SELECT * FROM users WHERE id = '$id'") or die(mysqli_error($con));
 $user_login = mysqli_fetch_assoc($query);
+$image = base64_encode($user_login['foto']);
+
 
 echo '
 <!Doctype html>
@@ -101,11 +103,15 @@ echo '
                                 <div class="content-menu" >
                                     <i class="fa fa-user"></i>
                                     <a href="./profileUsersPage.php" style="font-weight:500">Profile</a>
-                                </div>
-                                <div class="content-menu" >
-                                    <i class="fa fa-person"></i>
-                                    <a href="./pegawaiPage.php" style="font-weight:500">Pegawai</a>
-                                </div>
+                                </div>';
+                                if($user_login['name'] == "admin"){
+                                    echo'
+                                    <div class="content-menu" >
+                                        <i class="fa fa-person"></i>
+                                        <a href="./pegawaiPage.php" style="font-weight:500">Pegawai</a>
+                                    </div>';
+                                }
+                                echo'
                                 <div class="content-menu" >
                                     <i class="fa fa-table"></i>
                                     <a href="./pesanTempatPage.php" style="font-weight:500">Pesan Tempat</a>
@@ -116,7 +122,8 @@ echo '
                                 </div>
                             </div>                      
                         <hr>
-                            <h5  class="text-center text-light">'.$user_login['name'].'                            
+                            <h5  class="text-left text-light m-3"><img src="data:image/jpeg;base64,'.$image.'" alt=""" class="rounded-circle" style="width: 50px; height: 50px;">
+                            '.$user_login['name'].'</h5>                            
                         <hr>
                 </div>
                 '

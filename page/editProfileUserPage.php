@@ -27,7 +27,7 @@ $user = mysqli_fetch_assoc($query);
                                     <h6 class="mb-0">Full Name</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                <input class="form-control" id="name" name="name" aria-describedby="emailHelp" value="<?php echo $user['name']?>">
+                                <input class="form-control" id="name" name="name" aria-describedby="emailHelp" value="<?php echo $user['name']?>" required>
                                 </div>
                             </div>
                             <div class="row mb-3">
@@ -35,7 +35,7 @@ $user = mysqli_fetch_assoc($query);
                                     <h6 class="mb-0">Email</h6>
                                 </div>
                                 <div class="col-sm-9 text-secondary">
-                                <input class="form-control" id="email" name="email" aria-describedby="emailHelp" value="<?php echo $user['email']?>">
+                                <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" value="<?php echo $user['email']?>" required>
                                 </div>
                             </div>
 
