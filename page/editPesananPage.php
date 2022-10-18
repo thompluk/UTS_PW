@@ -46,6 +46,7 @@ $_SESSION['tipe_meja_pemesanan'] =$data["tipe_meja"];
                         }
                     }
                 ?>></select>
+      </div>
     </div>
 
     <div class="mb-3">
