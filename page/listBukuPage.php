@@ -57,18 +57,22 @@
                             <td>'.$data['penulis'].'</td>
                             <td>'.$data['tahun_terbit'].'</td>
                             <td>'.$data['stok'].'</td>
-                            <td><img src="../process/uploads/'.$data['gambar'].'" alt="pic" style="width: 100px; height: 100px;"></td>                            <td>
+                            <td><img src="../process/uploads/'.$data['gambar'].'" alt="pic" style="width: 100px; height: 100px;"></td>                            
                             <td>
-                                <form action="../page/editBukuPage.php" method="post">
-                                    <input type="hidden" id="id_buku" name="id_buku" value="'.$data['id'].'"> 
-                                    <button type="submit" class="btn btn-primary">Ubah</button>
-                                </form>
-                            </td>
-                            <td>
-                            <form action="../process/deleteBukuProcess.php" method="post">
-                                <input type="hidden" id="id_buku" name="id_buku" value="'.$data['id'].'"> 
-                                <button type="submit" class="btn btn-danger">Hapus</button>
-                            </form>           
+                                <div class="row">
+                                    <div class="col">
+                                        <form action="../page/editBukuPage.php" method="post">
+                                            <input type="hidden" id="id_buku" name="id_buku" value="'.$data['id'].'"> 
+                                            <button type="submit" class="btn btn-primary">Ubah</button>
+                                        </form>
+                                    </div>
+                                    <div class="col">
+                                        <form action="../process/deleteBukuProcess.php" method="post">
+                                            <input type="hidden" id="id_buku" name="id_buku" value="'.$data['id'].'"> 
+                                            <button type="submit" class="btn btn-danger">Hapus</button>
+                                        </form>
+                                    </div>
+                                </div>
                             </td>
                         </tr>';
                         $no++;

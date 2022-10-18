@@ -26,12 +26,11 @@
                             <form action="../process/loginProcess.php" method="post">
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="formlabel">Email</label>
-                                    <input class="form-control" id="email" name="email"
-                                            aria-describedby="emailHelp">
+                                    <input class="form-control" id="email" name="email" aria-describedby="emailHelp" required>
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="formlabel">Password</label>
-                                    <input type="password" class="form-control" id="passwords" name="passwords">
+                                    <input type="password" class="form-control" id="passwords" name="passwords" required>
                                 </div>
                                 <div class="d-grid gap-2">
                                     <button type="submit" class="btn loginBtn" name="login">Login</button>

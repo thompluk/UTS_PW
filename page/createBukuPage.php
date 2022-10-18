@@ -15,23 +15,23 @@ include( '../db.php');
         <hr>
         <form action="../process/saveBukuProcess.php" method="post" enctype="multipart/form-data">          
             <label for="judul" class="form-label">Judul Buku</label>
-                <input type="text" id="judul" name="judul" class="form-control inputstyle" >
+                <input type="text" id="judul" name="judul" class="form-control inputstyle" required>
             <br>
 
             <label for="penulis" class="form-label">Penulis</label>
-                <input type="text" id="penulis" name="penulis" class="form-control inputstyle">
+                <input type="text" id="penulis" name="penulis" class="form-control inputstyle" required>
             <br>
 
             <label for="tahun_terbit" class="form-label">Tahun Terbit</label>
-                <input type="text" id="tahun_terbit" name="tahun_terbit" class="form-control inputstyle">
+                <input type="text" id="tahun_terbit" name="tahun_terbit" class="form-control inputstyle" required>
             <br>
 
             <label for="stok" class="form-label">stok</label>
-                <input type="text" id="stok" name="stok" class="form-control inputstyle">
+                <input type="text" id="stok" name="stok" class="form-control inputstyle" required>
             <br>
 
             <label for="gambar" class="form-label">Gambar</label>
-                <input type="file" class="form-control" id="gambar" name="gambar"/>
+                <input type="file" class="form-control" id="gambar" name="gambar" accept="image/*" required>
             <br>                                                                                                                              
             <button type="submit" class="btn btn-success" style="float: right" name="save">CONFIRM</button>
         </form>        
