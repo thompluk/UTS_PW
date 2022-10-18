@@ -7,9 +7,15 @@
         0.19);">
 
 <div class="body d-flex justify-content-between">
-    <h4>LIST PEGAWAI</h4>
+    <h4>LIST RESERVASI MEJA</h4>
     <div class="content-menu ">
-      <a href="./createPegawaiPage.php" style="color:#114ec88d" class="fa fa-plus-square fa-2x"></a>
+      <?php
+      if($_SESSION['user']['name'] != "admin"){
+        echo'
+        <a href="./createPesananPage.php" style="color:#114ec88d" class="fa fa-plus-square fa-2x"></a>
+        ';
+      }
+      ?>
     </div>
   </div>
 
@@ -18,14 +24,15 @@
     <thead>
       <tr>
         <th scope="col">No</th>
-        <th scope="col">Nama</th>
-        <th scope="col">Telepon</th>
+        <th scope="col">Nama Pemesan</th>
+        <th scope="col">Tipe Meja</th>
+        <th scope="col">Tanggal Reservasi</th>
         <th scope="col"></th>
       </tr>
     </thead>
     <tbody>
       <?php
-            $query = mysqli_query($con, "SELECT * FROM pegawai") or
+            $query = mysqli_query($con, "SELECT * FROM pemesanan") or
 die(mysqli_error($con));
 
             if (mysqli_num_rows($query) == 0) {
@@ -36,15 +43,21 @@ die(mysqli_error($con));
                 echo'
                 <tr>
                     <th scope="row">'.$no.'</th>
-                    <td>'.$data['nama'].'</td>
-                    <td>'.$data['telepon'].'</td>
+                    <td>'.$data['nama_pemesan'].'</td>
+                    <td>'.$data['tipe_meja'].'</td>
+                    <td>'.$data['tgl_reservasi'].'</td>
+                    ';
+                   if($_SESSION['user']['name'] == "admin"){
+                    echo'
                     <td>
-                    <a href="./editPegawaiPage.php? id=' . $data['id'] . '"><i style="color: black" class="fa fa-edit fa-2x"></i></a>
-                        <a href="../process/deletePegawaiProcess.php?id='.$data['id'].'"
-                          onClick="return confirm ( \'Are you sure want to delete this data?\')">                          
+                    <a href="./editPesananPage.php? id=' . $data['id'] . '"><i style="color: black" class="fa fa-edit fa-2x"></i></a>
+                        <a href="../process/deletePesananProcess.php?id='.$data['id'].'"
+                          onClick="return confirm ( \'Anda yakin ingin menghapus reservasi?\')">                          
                           <i style="color: red" class="fa fa-trash fa-2x"></i>
                         </a>
-                    </td>
+                    </td>';
+                   } 
+                    echo'
                 </tr>';
             $no++;
             }

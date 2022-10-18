@@ -9,6 +9,8 @@ if (!$_SESSION['isLogin']) {
 $id = $_SESSION['user']['id'];
 $query = mysqli_query($con, "SELECT * FROM users WHERE id = '$id'") or die(mysqli_error($con));
 $user_login = mysqli_fetch_assoc($query);
+$image = base64_encode($user_login['foto']);
+
 
 echo '
 <!Doctype html>
@@ -97,10 +99,6 @@ echo '
                                 <div class="content-menu" >
                                     <i class="fa fa-sticky-note"></i>
                                     <a href="./peminjamanPage.php" style="font-weight:500">Peminjaman</a>
-                                </div>
-                                <div class="content-menu" >
-                                    <i class="fa fa-user"></i>
-                                    <a href="./profileUsersPage.php" style="font-weight:500">Profile</a>
                                 </div>';
                                 if($user_login['name'] == "admin"){
                                     echo'
@@ -111,12 +109,21 @@ echo '
                                 }
                                 echo'
                                 <div class="content-menu" >
+                                    <i class="fa fa-table"></i>
+                                        <a href="./pesanTempatPage.php" style="font-weight:500">Reservasi Meja</a>
+                                </div>
+                                <div class="content-menu" >
+                                    <i class="fa fa-user"></i>
+                                        <a href="./profileUsersPage.php" style="font-weight:500">Profile</a>
+                                </div>
+                                <div class="content-menu" >
                                     <i class="fa fa-arrow-right-from-bracket"></i>
                                     <a href="../process/logoutProcess.php" style="font-weight:500">Logout</a>
                                 </div>
                             </div>                      
                         <hr>
-                            <h5  class="text-center text-light">'.$user_login['name'].'                            
+                            <h5  class="text-left text-light m-3"><img src="data:image/jpeg;base64,'.$image.'" alt=""" class="rounded-circle" style="width: 50px; height: 50px;">
+                            '.$user_login['name'].'</h5>                            
                         <hr>
                 </div>
                 '
